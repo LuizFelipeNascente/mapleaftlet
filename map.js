@@ -2,24 +2,24 @@ var map = L.map('map').setView([-16.681250430688017, -49.25615568115328], 15);
 
 var Camada_Satelite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 19,
-    subdomains:['mt0','mt1','mt2','mt3']
-/*Creditos*/  //	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+    subdomains:['mt0','mt1','mt2','mt3'],
+/*Creditos*/ 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 
 });
 Camada_Satelite.addTo(map);
 
-/*Camada de satelite do google
+//Camada de satelite do google
 
 Satelite = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
    maxZoom: 20,
    subdomains:['mt0','mt1','mt2','mt3']
  });
  Satelite.addTo(map);
- */
  
+//Camada de stret
 
 openstreetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
- /*Creditos*/  // attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+ /*Creditos*/   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 
 
@@ -29,7 +29,7 @@ var camadas = {
 
     "Satelite":Camada_Satelite,
     "StreetMap": openstreetmap,
-    //"Satelite Google":Satelite,
+    "Satelite Google":Satelite,
     
 };
 
